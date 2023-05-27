@@ -1,0 +1,70 @@
+ * Serving Flask app "password" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:5003/ (Press CTRL+C to quit)
+127.0.0.1 - - [27/May/2023 14:45:18] "[37mGET / HTTP/1.1[0m" 200 -
+ * Serving Flask app "password" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:5003/ (Press CTRL+C to quit)
+ * Serving Flask app "password" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:5003/ (Press CTRL+C to quit)
+127.0.0.1 - - [27/May/2023 14:49:21] "[37mGET / HTTP/1.1[0m" 200 -
+[2023-05-27 14:55:23,121] ERROR in app: Exception on /login/v1 [POST]
+Traceback (most recent call last):
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "password.py", line 49, in login_v1
+    if verify_plain(request.form['username'], request.form['password']):
+  File "password.py", line 38, in verify_plain
+    c.execute(query)
+sqlite3.OperationalError: no such table: USER_PLAIN
+127.0.0.1 - - [27/May/2023 14:55:23] "[35m[1mPOST /login/v1 HTTP/1.1[0m" 500 -
+ * Serving Flask app "password" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on https://0.0.0.0:5003/ (Press CTRL+C to quit)
+[2023-05-27 15:01:47,438] ERROR in app: Exception on /login/v1 [POST]
+Traceback (most recent call last):
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/devasc/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "password.py", line 49, in login_v1
+    if verify_plain(request.form['username'], request.form['password']):
+  File "password.py", line 38, in verify_plain
+    c.execute(query)
+sqlite3.OperationalError: no such table: USER_PLAIN
+127.0.0.1 - - [27/May/2023 15:01:47] "[35m[1mPOST /login/v1 HTTP/1.1[0m" 500 -
+127.0.0.1 - - [27/May/2023 15:05:03] "[37mPOST /signup/v1 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [27/May/2023 15:06:27] "[37mPOST /signup/v1 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [27/May/2023 15:08:09] "[37mPOST /login/v1 HTTP/1.1[0m" 200 -
+127.0.0.1 - - [27/May/2023 15:08:30] "[37mPOST /login/v1 HTTP/1.1[0m" 200 -
